@@ -122,7 +122,8 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/assets/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/styles/modules',
+                config: 'config.rb',
+                // importPath: '<%= yeoman.app %>/styles/modules',
                 relativeAssets: true
             },
             dist: {

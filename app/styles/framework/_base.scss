@@ -1,0 +1,30 @@
+/**
+* @section framework
+* @author jroug
+*/
+
+// ---------------------------------------------------------------------------
+// Base variables
+$footer-height: 135px;
+
+$show-grid-backgrounds: true;
+
+// ---------------------------------------------------------------------------
+// Colors
+ 
+$color-white:               rgb(255, 255, 255); 
+$color-black:               rgb(0, 0, 0);
+
+
+html {
+    height: 100%;
+}
+ 
+body {
+    min-height: 100%;  
+    overflow-y: scroll;
+    
+    -webkit-text-size-adjust: none; //don't resize on orientation mobile
+    -webkit-font-smoothing: antialiased;
+    color: $color-black;
+}

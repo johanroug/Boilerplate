@@ -1,0 +1,39 @@
+/**
+* Mixins for browser alignment
+*
+* @section Framework
+* @author jroug
+*/
+@import "compass/css3";
+
+*{
+	@include box-sizing(border-box);
+}
+
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+@mixin font($fontSize, $lineHeight, $basicFontSize: $basicFontSize) {
+    font-size: $fontSize / $basicFontSize + em;
+    
+    @if $lineHeight == normal {
+        line-height: $lineHeight;
+    }
+    @else {
+        line-height: $lineHeight / $fontSize + em;
+    }
+
+}
+
+@mixin gradient($image) {
+    @include background-image($image); // Compass default version, for everything but IE 10.
+    background-image: -ms-#{$image}; // Vendor prefixes for IE 10.
+}

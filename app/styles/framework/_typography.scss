@@ -1,0 +1,31 @@
+/**
+* Base typographical setup (vertical rythm etc)
+*
+* @section Layout
+* @author jroug
+*/
+
+@include establish-baseline;
+
+//Mobile fontsize
+$basicFontSize: 13;
+$lineHeight: 18;
+
+* {
+    word-wrap: break-word;
+}
+
+// Typography
+body {
+    @include font($basicFontSize , $lineHeight , 16);
+    font-family: verdana, serif;
+
+}
+    
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
