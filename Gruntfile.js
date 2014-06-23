@@ -126,11 +126,6 @@ module.exports = function (grunt) {
                 // importPath: '<%= yeoman.app %>/styles/modules',
                 relativeAssets: true
             },
-            dist: {
-                options: {
-                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-                }
-            },
             server: {
                 options: {
                     debugInfo: true
@@ -161,7 +156,7 @@ module.exports = function (grunt) {
                     useStrict: true,
                     wrap: true,
                     paths: {
-                        'jquery': '../bower_components/jquery/jquery'
+                        'jquery': '../bower_components/jquery/dist/jquery'
                     }
                 }
             }
@@ -264,9 +259,11 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*',
+                        'assets/fonts/{,*/}*.*',
+                        'assets/icons/{,*/}*.*',
+                        'assets/images/sprites/*.png',
+                        'assets/images/sprites-retina/*.png',
                         'bower_components/{,*/}*.*'
                     ]
                 }]
