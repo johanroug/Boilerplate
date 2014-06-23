@@ -1,0 +1,45 @@
+/**
+* Base typographical setup (vertical rythm etc)
+*
+* @media queries
+* @author jroug
+*/
+//-------------------------------------------
+
+@mixin media($point) {
+  @if $point == bigScreen {
+    @media screen and (min-width: 1920px) { @content; }
+  }
+  @if $point == desktopWide {
+    @media screen and (min-width: 1440px) { @content; }
+  }
+  @if $point == desktop {
+    @media screen and (min-width: 1280px) { @content; }
+  }
+  @if $point == tabletH {
+    @media screen and (min-width: 1024px)  { @content; }
+  }  
+  @if $point == tabletV {
+    @media screen and (min-width: 768px)  { @content; }
+  }
+  @if $point == mobileH {
+	@media screen and (min-width: 321px) and (max-width: 767px)  { @content; }
+  }
+  @if $point == mobileV {
+    @media screen and (max-width: 320px)  { @content; }
+  }
+
+  //Both mobile V and H
+  @if $point == mobile {
+    @media screen and (max-width: 767px)  { @content; }
+  }
+}
+
+
+// body{
+//   @include media(desktop) { background: orange !important; }
+//   @include media(tabletH) { background: #000 !important; }
+//   @include media(tabletV) { background: red !important;    }
+//   @include media(mobileH) { background: yellow !important;    }
+//   @include media(mobileV) { background: purple !important; }
+// }

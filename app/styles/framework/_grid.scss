@@ -1,0 +1,27 @@
+//Variables
+$column-width: 	40px;
+$gutter-width: 	20px;
+$columns: 		12;
+
+//Actual grid
+@function gridsystem-width($columns:$columns) {
+	@return ($column-width * $columns) ;
+}
+
+.row {
+	@extend %clearfix;
+	display: block;	
+	margin: 0 -1*($gutter-width);	
+}
+
+@mixin column($x,$columns:$columns) {
+	float: left;
+	padding: 0 $gutter-width;	
+	width: $x/$columns*100%
+}
+
+.wrapper{
+	@extend %clearfix;
+	margin: 0 auto;
+	max-width: 980px;
+}
