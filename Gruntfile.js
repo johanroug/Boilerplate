@@ -155,9 +155,7 @@ module.exports = function (grunt) {
                     preserveLicenseComments: false,
                     useStrict: true,
                     wrap: true,
-                    paths: {
-                        'jquery': '../bower_components/jquery/dist/jquery'
-                    }
+                    mainConfigFile: '<%= yeoman.app %>/scripts/main.js'
                 }
             }
         },
