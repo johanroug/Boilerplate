@@ -70,7 +70,6 @@ module.exports = function (grunt) {
                 options: {
                     open: true,
                     base: [
-                        '.tmp',
                         '<%= yeoman.app %>'
                     ]
                 }
@@ -90,7 +89,6 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '.tmp',
                         '<%= yeoman.dist %>/*',
                         '!<%= yeoman.dist %>/.git*'
                     ]
@@ -122,6 +120,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/assets/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
+                noLineComments: true,
                 config: 'config.rb',
                 // importPath: '<%= yeoman.app %>/styles/modules',
                 relativeAssets: true
@@ -133,20 +132,11 @@ module.exports = function (grunt) {
             }
         },
 
-        // Automatically inject Bower components into the HTML file
-        'bower-install': {
-            app: {
-                html: '<%= yeoman.app %>/index.html',
-                ignorePath: '<%= yeoman.app %>/'
-            }
-        },
-
         requirejs: {
             dist: {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
                     name: 'main',
-                    // `name` and `out` is set by grunt-usemin
                     out: '<%= yeoman.dist %>/scripts/main.js',
                     baseUrl: '<%= yeoman.app %>/scripts',
                     optimize: 'uglify',
@@ -158,40 +148,6 @@ module.exports = function (grunt) {
                     mainConfigFile: '<%= yeoman.app %>/scripts/main.js'
                 }
             }
-        },
-
-
-        // Renames files for browser caching purposes
-        rev: {
-            dist: {
-                files: {
-                    src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*',
-                        '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
-                    ]
-                }
-            }
-        },
-
-        // Reads HTML for usemin blocks to enable smart builds that automatically
-        // concat, minify and revision files. Creates configurations in memory so
-        // additional tasks can operate on them
-        useminPrepare: {
-            options: {
-                dest: '<%= yeoman.dist %>'
-            },
-            html: '<%= yeoman.app %>/index.html'
-        },
-
-        // Performs rewrites based on rev and the useminPrepare configuration
-        usemin: {
-            options: {
-                assetsDirs: ['<%= yeoman.dist %>']
-            },
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
         },
 
         // The following *-min tasks produce minified files in the dist folder
@@ -209,7 +165,6 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     '<%= yeoman.dist %>/styles/main.css': [
-                        '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]
                 }
@@ -225,27 +180,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        htmlmin: {
-            dist: {
-                options: {
-                    collapseBooleanAttributes: true,
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeCommentsFromCDATA: true,
-                    removeEmptyAttributes: true,
-                    removeOptionalTags: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.dist %>',
-                    src: '{,*/}*.html',
-                    dest: '<%= yeoman.dist %>'
-                }]
-            }
-        },
-
+        
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -275,15 +210,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // modernizr: {
-        //     devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-        //     outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
-        //     files: [
-        //         '<%= yeoman.dist %>/scripts/{,*/}*.js'
-        //     ],
-        //     uglify: true
-        // },
-
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
@@ -299,7 +225,6 @@ module.exports = function (grunt) {
         }
     });
 
-
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -313,29 +238,16 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('server', function (target) {
-        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run([target ? ('serve:' + target) : 'serve']);
-    });
-
     grunt.registerTask('build', [
         'clean:dist',
-        'useminPrepare',
         'concurrent:dist',
         'requirejs',
-        // 'concat',
         'cssmin',
-        // 'uglify',
-        'copy:dist',
-        // 'modernizr',
-        'rev',
-        'usemin',
-        'htmlmin'
+        'copy:dist'
     ]);
 
     grunt.registerTask('default', [
         'newer:jshint',
-        'bower',
         'build'
     ]);
 };

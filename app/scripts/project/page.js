@@ -12,20 +12,20 @@ define(['jquery'], function ($) {
 
 	var parent,
 		$element;
-		
+
 	var Page = {
-		
+
 		init: function(_parent) {
-			
+
 			parent = _parent;
 
 			$element = $('.main');
 
-			console.log('working page.js');				
+			console.log('working page.js');
 		}
 	};
 
 	return Page;
 });
 
-	
+
