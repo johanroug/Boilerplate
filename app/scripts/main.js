@@ -1,23 +1,16 @@
-/*
- * Site functional wrapper
- *
- */
+/*global require*/
 
-/*jslint plusplus: true, vars: true, browser: true, white:true*/
-/*global require: true*/
-
-/* Remember to update Gruntfile.js with config */
+'use strict';
 require.config({
+	// baseUrl: 'js/lib',
     paths: {
         jquery: '../bower_components/jquery/dist/jquery.min'
     },
-    shim: {
-        // 'easing' : ['jquery']        
+    shim: { // mainly for e.g. "backbone" that needs "jquery"
+        // 'easing' : ['jquery']       
 	}
 });
 
-require(['jquery', 'project/site'], function ($, site) {
-    'use strict';
-    
-    site.init();
+require(['jquery', 'project/page'], function ($, page) {
+	page.init();
 });

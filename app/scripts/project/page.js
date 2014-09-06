@@ -13,9 +13,7 @@ define(['jquery'], function ($) {
 	var parent,
 		$element;
 		
-	var Page;
-	
-	Page = {
+	var Page = {
 		
 		init: function(_parent) {
 			
@@ -23,8 +21,7 @@ define(['jquery'], function ($) {
 
 			$element = $('.main');
 
-			console.log('working page.js');
-				
+			console.log('working page.js');				
 		}
 	};
 
