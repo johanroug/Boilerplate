@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
+
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -197,7 +197,7 @@ module.exports = function (grunt) {
                         'assets/icons/{,*/}*.*',
                         'assets/images/sprites/*.png',
                         'assets/images/sprites-retina/*.png',
-                        'bower_components/{,*/}*.*'
+                        'bower_components/requirejs/require.js'
                     ]
                 }]
             },
@@ -209,6 +209,14 @@ module.exports = function (grunt) {
                 src: '{,*/}*.css'
             }
         },
+
+		modernizr: {
+			dist: {
+				devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
+				outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+				uglify: true
+			}
+		},
 
         // Run some tasks in parallel to speed up build process
         concurrent: {
@@ -243,7 +251,8 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'requirejs',
         'cssmin',
-        'copy:dist'
+        'copy:dist',
+        'modernizr'
     ]);
 
     grunt.registerTask('default', [
