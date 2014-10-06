@@ -2,18 +2,18 @@
 <!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
-        <meta charset="utf-8" />        
+        <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <title>test3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />
-        
+
         <link rel="shortcut icon" href="../../assets/images/ui/favicon.ico" />
-        
+
         <link rel="stylesheet" href="styles/main.css">
         <script src="bower_components/modernizr/modernizr.js"></script>
-        
+
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -31,6 +31,52 @@
 				<li>RequireJS</li>
 			</ul>
 		</div>
+
+	<div class="container">
+		<h1>The 10 column complex nested grid AG test</h1>
+
+		<div class="ag ag1">
+			<h2>AG 1</h2>
+		</div>
+		<!-- /ag1 -->
+
+		<!-- ag4 to ag7 are nested within ag2.-->
+		<div class="ag ag2">
+			<h2>AG 2</h2>
+			<div class="ag ag4">
+				<h2>AG 4</h2>
+			</div>
+			<div class="ag ag5">
+				<h2>AG 5</h2>
+			</div>
+			<div class="ag ag6">
+				<h2>AG 6</h2>
+			</div>
+
+			<!-- ag8, ag9 and ag10 are nested within ag7 -->
+			<div class="ag ag7">
+				<h2>AG 7</h2>
+				<div class="ag ag8">
+					<h2>AG 8</h2>
+				</div>
+				<div class="ag ag9">
+					<h2>AG 9</h2>
+				</div>
+				<div class="ag ag10">
+					<h2>AG 10</h2>
+				</div>
+			</div>
+			<!-- /ag7 -->
+		</div>
+		<!-- /ag2 -->
+
+		<div class="ag ag3">
+			<h2>AG 3</h2>
+		</div>
+		<!-- /ag3 -->
+
+	</div>
+	<!-- /container -->
 
 
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>

@@ -7,7 +7,8 @@
 /*jslint browser: true, white: true, nomen: true */
 /*global define*/
 
-define(['jquery'], function ($) {
+// define(['jquery'], function ($) {
+define([], function () {
 	'use strict';
 
 	var parent,
@@ -20,6 +21,8 @@ define(['jquery'], function ($) {
 			parent = _parent;
 
 			$element = $('.main');
+
+			console.log($);
 
 			console.log('working page.js');
 		}

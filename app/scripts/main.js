@@ -7,7 +7,10 @@ require.config({
         jquery: '../bower_components/jquery/dist/jquery.min'
     },
     shim: { // mainly for e.g. "backbone" that needs "jquery"
-        // 'easing' : ['jquery']       
+        // 'easing' : ['jquery']
+        'jQuery': {
+			'exports': 'jQuery'
+		}
 	}
 });
 
