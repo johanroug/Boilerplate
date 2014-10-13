@@ -7,7 +7,6 @@
 /*jslint browser: true, white: true, nomen: true */
 /*global define*/
 
-// define(['jquery'], function ($) {
 define([], function () {
 	'use strict';
 
