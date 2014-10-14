@@ -28,7 +28,7 @@ module.exports = function (grunt) {
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+                files: ['<%= yeoman.app %>/js/{,*/}*.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+                    '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
                     '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,webp}'
                 ]
             }
@@ -105,10 +105,10 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/libs/*',
-                '!<%= yeoman.app %>/scripts/plugins/*',
-                '!<%= yeoman.app %>/scripts/framework/*'
+                '<%= yeoman.app %>/js/{,*/}*.js',
+                '!<%= yeoman.app %>/js/libs/*',
+                '!<%= yeoman.app %>/js/plugins/*',
+                '!<%= yeoman.app %>/js/framework/*'
             ]
         },
 
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '<%= yeoman.app %>/styles',
                 imagesDir: '<%= yeoman.app %>/assets/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
+                javascriptsDir: '<%= yeoman.app %>/js',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
                 noLineComments: true,
                 config: 'config.rb',
@@ -137,15 +137,15 @@ module.exports = function (grunt) {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
                     name: 'main',
-                    out: '<%= yeoman.dist %>/scripts/main.js',
-                    baseUrl: '<%= yeoman.app %>/scripts',
+                    out: '<%= yeoman.dist %>/js/main.js',
+                    baseUrl: '<%= yeoman.app %>/js',
                     optimize: 'uglify',
                     concat: [],
                     findNestedDependencies: true,
                     preserveLicenseComments: false,
                     useStrict: true,
                     wrap: true,
-                    mainConfigFile: '<%= yeoman.app %>/scripts/main.js'
+                    mainConfigFile: '<%= yeoman.app %>/js/main.js'
                 }
             }
         },

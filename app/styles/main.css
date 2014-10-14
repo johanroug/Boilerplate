@@ -2,12 +2,12 @@
 * Main project stylesheet combiner
 *
 * section Setup
-* @author Jroug
+* @author jroug
 */
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
+	 HTML5 display definitions
+	 ========================================================================== */
 /**
  * Correct `block` display not defined in IE 8/9.
  */
@@ -24,7 +24,7 @@ main,
 nav,
 section,
 summary {
-  display: block;
+	display: block;
 }
 
 /**
@@ -34,7 +34,7 @@ summary {
 audio,
 canvas,
 video {
-  display: inline-block;
+	display: inline-block;
 }
 
 /**
@@ -43,8 +43,8 @@ video {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000341}}
 audio:not([controls]) {
-  display: none;
-  height: 0;
+	display: none;
+	height: 0;
 }
 
 /**
@@ -52,12 +52,12 @@ audio:not([controls]) {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000350}}
 [hidden] {
-  display: none;
+	display: none;
 }
 
 /* ==========================================================================
-   Base
-   ========================================================================== */
+	 Base
+	 ========================================================================== */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -65,12 +65,12 @@ audio:not([controls]) {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000364}}
 html {
-  font-family: sans-serif;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
+	font-family: sans-serif;
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
 }
 
 /**
@@ -78,18 +78,18 @@ html {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000374}}
 body {
-  margin: 0;
+	margin: 0;
 }
 
 /* ==========================================================================
-   Links
-   ========================================================================== */
+	 Links
+	 ========================================================================== */
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000386}}
 a:focus {
-  outline: thin dotted;
+	outline: thin dotted;
 }
 
 /**
@@ -98,20 +98,20 @@ a:focus {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000394}}
 a:active,
 a:hover {
-  outline: 0;
+	outline: 0;
 }
 
 /* ==========================================================================
-   Typography
-   ========================================================================== */
+	 Typography
+	 ========================================================================== */
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003108}}
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 /**
@@ -119,7 +119,7 @@ h1 {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003117}}
 abbr[title] {
-  border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 /**
@@ -128,7 +128,7 @@ abbr[title] {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003125}}
 b,
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /**
@@ -136,7 +136,7 @@ strong {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003134}}
 dfn {
-  font-style: italic;
+	font-style: italic;
 }
 
 /**
@@ -144,9 +144,9 @@ dfn {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003142}}
 hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
 }
 
 /**
@@ -154,8 +154,8 @@ hr {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003152}}
 mark {
-  background: #ff0;
-  color: #000;
+	background: #ff0;
+	color: #000;
 }
 
 /**
@@ -166,8 +166,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
-  font-size: 1em;
+	font-family: monospace, serif;
+	font-size: 1em;
 }
 
 /**
@@ -175,7 +175,7 @@ samp {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003173}}
 pre {
-  white-space: pre-wrap;
+	white-space: pre-wrap;
 }
 
 /**
@@ -183,7 +183,7 @@ pre {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003181}}
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /**
@@ -191,7 +191,7 @@ q {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003189}}
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -200,31 +200,31 @@ small {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003197}}
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003205}}
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003209}}
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 /* ==========================================================================
-   Embedded content
-   ========================================================================== */
+	 Embedded content
+	 ========================================================================== */
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003221}}
 img {
-  border: 0;
+	border: 0;
 }
 
 /**
@@ -232,31 +232,31 @@ img {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003229}}
 svg:not(:root) {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 /* ==========================================================================
-   Figures
-   ========================================================================== */
+	 Figures
+	 ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003241}}
 figure {
-  margin: 0;
+	margin: 0;
 }
 
 /* ==========================================================================
-   Forms
-   ========================================================================== */
+	 Forms
+	 ========================================================================== */
 /**
  * Define consistent border, margin, and padding.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003253}}
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
 }
 
 /**
@@ -265,10 +265,10 @@ fieldset {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003264}}
 legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+	border: 0;
+	/* 1 */
+	padding: 0;
+	/* 2 */
 }
 
 /**
@@ -281,12 +281,12 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 2 */
+	margin: 0;
+	/* 3 */
 }
 
 /**
@@ -296,7 +296,7 @@ textarea {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003289}}
 button,
 input {
-  line-height: normal;
+	line-height: normal;
 }
 
 /**
@@ -308,7 +308,7 @@ input {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003301}}
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 /**
@@ -323,10 +323,10 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
+	-webkit-appearance: button;
+	/* 2 */
+	cursor: pointer;
+	/* 3 */
 }
 
 /**
@@ -335,7 +335,7 @@ input[type="submit"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003326}}
 button[disabled],
 html input[disabled] {
-  cursor: default;
+	cursor: default;
 }
 
 /**
@@ -345,10 +345,10 @@ html input[disabled] {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003336}}
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
 }
 
 /**
@@ -358,12 +358,12 @@ input[type="radio"] {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003348}}
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
+	-webkit-appearance: textfield;
+	/* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	/* 2 */
+	box-sizing: content-box;
 }
 
 /**
@@ -373,7 +373,7 @@ input[type="search"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003360}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 /**
@@ -382,17 +382,17 @@ input[type="search"]::-webkit-search-decoration {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003369}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+	border: 0;
+	padding: 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003375}}
 input:focus {
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
 }
 
 /**
@@ -401,22 +401,22 @@ input:focus {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003388}}
 textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
+	overflow: auto;
+	/* 1 */
+	vertical-align: top;
+	/* 2 */
 }
 
 /* ==========================================================================
-   Tables
-   ========================================================================== */
+	 Tables
+	 ========================================================================== */
 /**
  * Remove most spacing between table cells.
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003401}}
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /**
@@ -441,48 +441,48 @@ table {
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\000038}}
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000318}}
 html {
-  height: 100%;
+	height: 100%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000322}}
 body {
-  min-height: 100%;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
-  color: black;
+	min-height: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	color: black;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000339}}
 .container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/framework\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
 .container:after {
-  content: " ";
-  display: block;
-  clear: both;
+	content: " ";
+	display: block;
+	clear: both;
 }
 
 /*
 
 position: relative;
 &:before {
-    @extend %icon-man;
-    color: blue;
-    font-size: 18px;
-    left: 0;
-    position: absolute;
-    top: 0;
+		@extend %icon-man;
+		color: blue;
+		font-size: 18px;
+		left: 0;
+		position: absolute;
+		top: 0;
 }
 
 */
@@ -494,170 +494,170 @@ position: relative;
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\00003106}}
 html {
-  font-size: 100%;
-  line-height: 1.5em;
+	font-size: 100%;
+	line-height: 1.5em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000314}}
 * {
-  word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000319}}
 body {
-  font-size: 0.8125em;
-  line-height: 1.38462em;
-  font-family: verdana, serif;
+	font-size: 0.8125em;
+	line-height: 1.38462em;
+	font-family: verdana, serif;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000325}}
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000328}}
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
 .ag1, .ag3 {
-  background-color: #71dad2;
+	background-color: #71dad2;
 }
 @media screen and (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
-  .ag1, .ag3 {
-    background: green;
-  }
+	.ag1, .ag3 {
+		background: green;
+	}
 }
 @media screen and (min-width: 1024px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
-  .ag1, .ag3 {
-    background: blue;
-  }
+	.ag1, .ag3 {
+		background: blue;
+	}
 }
 @media screen and (min-width: 1280px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
-  .ag1, .ag3 {
-    background: orange;
-  }
+	.ag1, .ag3 {
+		background: orange;
+	}
 }
 @media screen and (min-width: 1440px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
-  .ag1, .ag3 {
-    background: yellow;
-  }
+	.ag1, .ag3 {
+		background: yellow;
+	}
 }
 @media screen and (min-width: 1920px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
-  .ag1, .ag3 {
-    background: purple;
-  }
+	.ag1, .ag3 {
+		background: purple;
+	}
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000325}}
 .ag2 {
-  background-color: #fae7b3;
+	background-color: #fae7b3;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000329}}
 .ag4, .ag5, .ag8, .ag9 {
-  background-color: #ee9e9c;
+	background-color: #ee9e9c;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000333}}
 .ag6 {
-  background-color: #f09671;
+	background-color: #f09671;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000337}}
 .ag7 {
-  background-color: #f6d784;
+	background-color: #f6d784;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000341}}
 .ag10 {
-  background-color: #ea9fc3;
+	background-color: #ea9fc3;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000346}}
 .ag1 {
-  width: 23.33333%;
-  float: left;
-  margin-left: 0.83333%;
-  margin-right: 0.83333%;
+	width: 23.33333%;
+	float: left;
+	margin-left: 0.83333%;
+	margin-right: 0.83333%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000350}}
 .ag2 {
-  width: 50%;
-  float: left;
+	width: 50%;
+	float: left;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000354}}
 .ag3 {
-  width: 23.33333%;
-  float: left;
-  margin-left: 0.83333%;
-  margin-right: 0.83333%;
+	width: 23.33333%;
+	float: left;
+	margin-left: 0.83333%;
+	margin-right: 0.83333%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000358}}
 .ag4 {
-  width: 46.66667%;
-  float: left;
-  margin-left: 1.66667%;
-  margin-right: 1.66667%;
+	width: 46.66667%;
+	float: left;
+	margin-left: 1.66667%;
+	margin-right: 1.66667%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000363}}
 .ag5 {
-  width: 46.66667%;
-  float: left;
-  margin-left: 1.66667%;
-  margin-right: 1.66667%;
+	width: 46.66667%;
+	float: left;
+	margin-left: 1.66667%;
+	margin-right: 1.66667%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000367}}
 .ag6 {
-  width: 30%;
-  float: left;
-  margin-left: 1.66667%;
-  margin-right: 1.66667%;
+	width: 30%;
+	float: left;
+	margin-left: 1.66667%;
+	margin-right: 1.66667%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000371}}
 .ag7 {
-  width: 66.66667%;
-  float: left;
+	width: 66.66667%;
+	float: left;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000375}}
 .ag8 {
-  width: 45%;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+	width: 45%;
+	float: left;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000379}}
 .ag9 {
-  width: 45%;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+	width: 45%;
+	float: left;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000383}}
 .ag10 {
-  width: 95%;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+	width: 95%;
+	float: left;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 @media print {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/u2958\/Downloads\/2014_boilerplate\/app\/styles\/main\.scss}line{font-family:\0000333}}
-  * {
-    color: #000 !important;
-  }
+	* {
+		color: #000 !important;
+	}
 }
