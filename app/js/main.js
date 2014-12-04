@@ -13,7 +13,7 @@ require.config({
 
 	paths: {
 		domReady: 'libs/domReady',
-		jquery: '../bower_components/jquery/dist/jquery.min',
+		jquery: '../js/vendor/jquery/dist/jquery.min',
 		page: 'modules/page' 
 	},
 

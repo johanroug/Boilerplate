@@ -207,7 +207,7 @@ module.exports = function (grunt) {
                         '{,*/}*.html',
                         'styles/*.css',
                         'assets/**/*',
-                        'bower_components/requirejs/require.js'
+                        'js/vendor/requirejs/require.js'
                     ]
                 }]
             },
@@ -222,8 +222,8 @@ module.exports = function (grunt) {
 
 		modernizr: {
 			dist: {
-				devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-				outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+				devFile: '<%= yeoman.app %>/js/vendor/modernizr/modernizr.js',
+				outputFile: '<%= yeoman.dist %>/js/vendor/modernizr/modernizr.js',
 				uglify: true
 			}
 		},
