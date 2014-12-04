@@ -23,7 +23,7 @@ $test2: 'M1.105 10.25H30.76c.482 0 .874-.393.874-.875s-.392-.875-.875-.875H1.104
 }
 .ag1 {
 	&:before {		
-		background-image: svgShape(green, $test);
+		background-image: svgShape(#000, $test);
 	}
 }
 .ag2 {

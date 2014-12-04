@@ -116,16 +116,21 @@ module.exports = function (grunt) {
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
+                require: './base64-encode.rb',
+                sassDir: '<%= yeoman.app %>/styles',                
                 cssDir: '<%= yeoman.app %>/styles',
                 imagesDir: '<%= yeoman.app %>/assets/images',
                 javascriptsDir: '<%= yeoman.app %>/js',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                noLineComments: true,
-                config: 'config.rb',
-                // importPath: '<%= yeoman.app %>/styles/modules',
+                fontsDir: '<%= yeoman.app %>/styles/fonts',                
+
+                // config.rb moved to grunt
+                outputStyle: 'expanded',  //expanded or nested or compact or compressed 
+                httpStylesheetsPath: '/', 
+                raw: 'Sass::Script::Number.precision = 16\n', 
+                noLineComments: true, 
+                debugInfo: false,
                 relativeAssets: true
-            },
+            },            
             server: {
                 options: {
                     debugInfo: true
