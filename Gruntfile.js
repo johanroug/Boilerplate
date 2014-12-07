@@ -39,7 +39,7 @@ module.exports = function (grunt) {
             },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
+                tasks: ['compass:server', 'newer:csscomb']
             },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
@@ -83,6 +83,21 @@ module.exports = function (grunt) {
             }
         },
 
+        csscomb: {
+            options: {
+                config: 'css-comb.json'
+            },
+            your_target: {
+                files: [{
+                    expand: true,
+                    filter: 'isFile',
+                    cwd: '<%= yeoman.app %>/styles',
+                    src: '**/*.scss',
+                    dest: '<%= yeoman.app %>/styles'
+                }]
+            },
+        },
+
         // Empties folders to start fresh
         clean: {
             dist: {
@@ -121,7 +136,7 @@ module.exports = function (grunt) {
                 cssDir: '<%= yeoman.app %>/styles',
                 imagesDir: '<%= yeoman.app %>/assets/images',
                 javascriptsDir: '<%= yeoman.app %>/js',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',                
+                fontsDir: '<%= yeoman.app %>/styles/fonts',            
 
                 // config.rb moved to grunt
                 outputStyle: 'expanded',  //expanded or nested or compact or compressed 
