@@ -39,11 +39,11 @@ module.exports = function (grunt) {
             },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'newer:csscomb']
+                // tasks: ['compass:server', 'newer:csscomb']
+                tasks: ['compass:server']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:copy:styles']
+                files: ['<%= yeoman.app %>/styles/{,*/}*.css']
             },
             livereload: {
                 options: {
@@ -83,20 +83,20 @@ module.exports = function (grunt) {
             }
         },
 
-        csscomb: {
-            options: {
-                config: 'css-comb.json'
-            },
-            your_target: {
-                files: [{
-                    expand: true,
-                    filter: 'isFile',
-                    cwd: '<%= yeoman.app %>/styles',
-                    src: '**/*.scss',
-                    dest: '<%= yeoman.app %>/styles'
-                }]
-            },
-        },
+        // csscomb: {
+        //     options: {
+        //         config: 'css-comb.json'
+        //     },
+        //     your_target: {
+        //         files: [{
+        //             expand: true,
+        //             filter: 'isFile',
+        //             cwd: '<%= yeoman.app %>/styles',
+        //             src: '**/*.scss',
+        //             dest: '<%= yeoman.app %>/styles'
+        //         }]
+        //     },
+        // },
 
         // Empties folders to start fresh
         clean: {
@@ -225,13 +225,6 @@ module.exports = function (grunt) {
                         'js/vendor/requirejs/require.js'
                     ]
                 }]
-            },
-            styles: {
-                expand: true,
-                dot: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '<%= yeoman.app %>/styles',
-                src: '{,*/}*.css'
             }
         },
 
@@ -246,12 +239,10 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
-                'compass:server',
-                'copy:styles'
+                'compass:server'
             ],
             dist: [
-                'compass',
-                'copy:styles'             
+                'compass'            
             ]
         }
     });
