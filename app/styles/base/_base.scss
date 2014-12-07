@@ -1,0 +1,41 @@
+/**
+* @section framework
+* @author jroug
+*/
+
+@import "compass/css3";
+
+*{
+	@include box-sizing(border-box);
+}
+
+// ---------------------------------------------------------------------------
+// Base variables
+$footer-height: 135px;
+
+$show-grid-backgrounds: true;
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	overflow-y: scroll;
+
+	-webkit-text-size-adjust: none; //don't resize on orientation mobile
+	-webkit-font-smoothing: antialiased;
+	color: $color-black;
+}
+
+$susy: (
+	global-box-sizing: border-box,
+	gutters: .25,
+	columns: 12,
+	gutter-position: split,
+
+);
+
+.container {
+	@include container(960px);
+}

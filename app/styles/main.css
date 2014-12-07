@@ -1,1 +1,696 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.row,.wrapper{*zoom:1}.row:before,.wrapper:before,.row:after,.wrapper:after{content:"";display:table}.row:after,.wrapper:after{clear:both}/*! normalize.css v2.1.0 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input:focus{outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}html{height:100%}body{min-height:100%;overflow-y:scroll;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;color:#000}.row{display:block;margin:0 -20px}.wrapper{margin:0 auto;max-width:980px}* html{font-size:100%}html{font-size:16px;line-height:1.5em}*{word-wrap:break-word}body{font-size:0.8125em;line-height:1.38462em;font-family:verdana, serif}a{text-decoration:none}a:hover{text-decoration:underline}@media print{*{color:#000 !important}}
+/**
+* Main project stylesheet combiner
+*
+* section Setup
+* @author jroug
+*/
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000311}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000330}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000341}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000350}}
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000364}}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000374}}
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000386}}
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\0000394}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003108}}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003117}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003125}}
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003134}}
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003142}}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003152}}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003161}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003173}}
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003181}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003189}}
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003197}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003205}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003209}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003221}}
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003229}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003241}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003253}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003264}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003275}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003289}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003301}}
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003314}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003326}}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003336}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003348}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003360}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003369}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003375}}
+input:focus {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003388}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/_normalize\.scss}line{font-family:\00003401}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+* Base typographical setup (vertical rythm etc)
+*
+* @media queries
+* @author jroug
+*/
+/**
+* Mixins for browser alignment
+*
+* @section mixins
+* @author jroug
+*/
+/**
+* @section variables
+* @author jroug
+*/
+/**
+* @section framework
+* @author jroug
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\000038}}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000318}}
+html {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000322}}
+body {
+  min-height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_base\.scss}line{font-family:\0000339}}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/framework\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_icons\.scss}line{font-family:\0000327}}
+.ag1:before, .ag2:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+
+position: relative;
+&:before {
+    @extend %icon-man;
+    color: blue;
+    font-size: 18px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_svg_icons\.scss}line{font-family:\000039}}
+.ag1:before, .ag2:before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_svg_icons\.scss}line{font-family:\0000323}}
+.ag1:before {
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9\aIiMwMDAiIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTMxLjMgMTIu\aMDg0Yy0uMzctLjU4OC0uOTUtLjk5NS0xLjYyNy0xLjE0Ny0uMDQ0LS4wMS0u\aMDktLjAxNy0uMTM2LS4wMi0uMDM0IDAtMy40MTgtLjIyMy01LjYxMy0uNzE1\aLTEuMTUzLS4yNi0yLjU4Mi0uNzMyLTMuNTc4LTEuMDg0bC0uNzE2LS4yNTIu\aMzc0IDEuOTkuMjQuMDgyYzEuMy40NDUgMi40MS43NzIgMy4yOTcuOTcyIDIu\aMTYuNDg1IDUuMjc4LjcxNCA1LjgwNC43NS4xOTguMDU4LjM2Ni4xODYuNDc4\aLjM2Mi4xMjIuMTkzLjE2Mi40Mi4xMTIuNjQybC0yLjMxIDEwLjI4MmMwIC4w\aMDctLjAwMi4wMTMtLjAwMy4wMi0uMzMzIDEuNDY1LTEuMTY3IDIuNzg1LTIu\aMzQ3IDMuNzE4LTEuMTcuOTI0LTIuNjMgMS40MzMtNC4xMDcgMS40MzMtLjQ4\aNSAwLS45NzQtLjA1NC0xLjQ1Mi0uMTYyLTIuNDcyLS41NTUtNC40MzYtMi41\aMTgtNS4wMDUtNWwtLjExNC0uNDk1LS40NzIuMTg0Yy0uMjY2LjEwNC0uNTMz\aLjE5Ni0uNzk2LjI3M2wtLjQuMTE4LjA5OC40MDRjLjI4IDEuMTYuODEzIDIu\aMjY4IDEuNTQzIDMuMjA1IDEuMTg2IDEuNTIzIDIuODc3IDIuNTk1IDQuNzYg\aMy4wMTcuNjA0LjEzNiAxLjIyLjIwNCAxLjgzNS4yMDQgMS44NyAwIDMuNzE0\aLS42NDMgNS4xOTItMS44MSAxLjUtMS4xODUgMi41NTctMi44NjUgMi45Nzct\aNC43MzJsMi4zMDctMTAuMjc3Yy4xNTMtLjY3Ny4wMzItMS4zNzQtLjM0LTEu\aOTYyek0xOS44IDIxLjZjLTEuNjIyIDAtMi44Ni43MTItMy42ODQgMi4xMTMt\aLjExOC4yMDItLjE1LjQzNy0uMDkyLjY2M3MuMjAyLjQxNi40MDQuNTM0Yy4x\aMzQuMDguMjg4LjEyLjQ0My4xMi4zMSAwIC42LS4xNjUuNzU2LS40My41LS44\aNSAxLjE5NS0xLjI0NyAyLjE5LTEuMjQ3LjMyMyAwIC42OC4wNDQgMS4wNjUu\aMTMgMS42LjM2IDIuMjcgMS4wMjIgMi40NyAyLjQ0NS4wNi40My40MzQuNzUz\aLjg2Ny43NTMuMDQgMCAuMDgyLS4wMDIuMTIyLS4wMDguMjMtLjAzMy40MzUt\aLjE1My41NzYtLjM0cy4yLS40MTcuMTY4LS42NDhjLS4zMDItMi4xNS0xLjUx\aNi0zLjM5LTMuODItMy45MDgtLjUxMy0uMTE2LTEuMDA2LS4xNzQtMS40NjMt\aLjE3NHptNS40OC0yLjQ2N2MuMDkyLjAyLjE5Ni4wMy4zMTYuMDMuNDkgMCAx\aLjE3My0uMTggMS41MzYtLjI4OC40NjItLjEzNy43MjctLjYyNi41OS0xLjA4\aOC0uMTEtLjM2OC0uNDU1LS42MjYtLjg0LS42MjYtLjA4NCAwLS4xNjguMDEz\aLS4yNS4wMzctLjQuMTItLjguMi0uOTcuMjE3LS4xMjctLjA3Ni0uNDI3LS4y\aOS0uNzQyLS41Ny0uMTYtLjE0Mi0uMzY3LS4yMi0uNTgtLjIyLS4yNSAwLS40\aOS4xMDYtLjY1NS4yOTMtLjMyLjM2LS4yODguOTE1LjA3MyAxLjIzNS40Mzgu\aMzkgMS4wNTguODc2IDEuNTIuOTh6bS02LjU2NS02LjM1YzAtLjAwNy0uMDAz\aLS4wMTMtLjAwNC0uMDJMMTYuNzcgMi40M0MxNi41MzcgMS4yIDE1LjQ2Mi4z\aMDYgMTQuMjEyLjMwNmMtLjE2IDAtLjMyMi4wMTUtLjQ4Mi4wNDUtLjAzNC4w\aMDctLjA3LjAxNi0uMTAzLjAyNi0uMDQuMDEzLTQuMTQ3IDEuMzI0LTUuNDY2\aIDEuNTctMS4xMDguMjEtNC40NjMuNDQ3LTUuNjYyLjUyLS4wMzUuMDAzLS4w\aNzIuMDA4LS4xMDguMDE0LS4yNDYuMDQ2LS40ODYuMTMtLjcxLjI0NS0uMjMu\aMTE4LS40NC4yNy0uNjIyLjQ0N0MuNDMgMy43ODQuMTUyIDQuNjYyLjMxMyA1\aLjUyTDIuMjYgMTUuODc1Yy4wNzguNDIzLjE5Ljg0LjMzMyAxLjI0Mi4wNDcu\aMTMzLjEuMjcuMTYzLjQyMy42MzQgMS41MjYgMS43IDIuODIyIDMuMDgyIDMu\aNzQ3IDEuMzg1LjkyNiAyLjk5MiAxLjQxNSA0LjY0NyAxLjQxNS41MTcgMCAx\aLjAzOC0uMDUgMS41NS0uMTQ1IDQuNTM2LS44NTMgNy41MzMtNS4yMzggNi42\aOC05Ljc3NnptLTMuMDUgNS42N2MtLjIuMjUtLjQxNi40ODYtLjY0Ny43MDMt\aLjA3Ny4wNzMtLjE1Ny4xNDUtLjIzOC4yMTMtLjg3NC43NDctMS45MzYgMS4y\aNTUtMy4wNyAxLjQ2OC0uNjQ3LjEyMi0xLjMxLjE0Ni0xLjk1OC4wNzQtLjE2\aLS4wMTgtLjMyLS4wNDItLjQ4LS4wNzItLjM5Ni0uMDc0LS43ODctLjE4Ni0x\aLjE2My0uMzMtLjQ1NS0uMTc3LS44OTItLjQwNS0xLjMtLjY3OC0uMzQtLjIy\aNy0uNjYtLjQ4Ni0uOTUtLjc3LS4xMTctLjExMi0uMjMtLjIzLS4zMzYtLjM1\aLS4xMzMtLjE1LS4yNi0uMzEtLjM4LS40N3MtLjIzLS4zMy0uMzM1LS41MDRj\aLS4wMzItLjA1Mi0uMDYzLS4xMDQtLjA5Mi0uMTU3LS4wOS0uMTU3LS4xNzMt\aLjMyLS4yNS0uNDg2bC0uMDk3LS4yMjRjLS4wMzctLjA5LS4wNy0uMTc1LS4x\aLS4yNTUtLjAxLS4wMjYtLjAxOC0uMDUyLS4wMjctLjA4LS4wNi0uMTY3LS4x\aMTQtLjM0Ny0uMTYzLS41MzQtLjA0LS4xNTctLjA3NC0uMzA0LS4xLS40NDhM\aMi4wMzIgNS4xOTdjLS4wMS0uMDUyLS4wMTUtLjEwNS0uMDE1LS4xNTggMC0u\aMDUzLjAwNS0uMTA1LjAxNS0uMTU2cy4wMjQtLjEuMDQzLS4xNWMuMDEyLS4w\aMy4wMjctLjA2My4wNDMtLjA5NC4wMzItLjA2Mi4wNzMtLjEyLjEyLS4xNzNs\aLjAzOC0uMDRjLjA2LS4wNTcuMTI4LS4xMDYuMjAyLS4xNDQuMDUyLS4wMjcu\aMTA3LS4wNDguMTYtLjA2NC4wMS0uMDA0LjAyLS4wMDYuMDMtLjAwOC4xODct\aLjAxMi44MjYtLjA1MyAxLjYyNi0uMTEybC42Ni0uMDVMNS41MzIgNGwuMzUt\aLjAzLjIzNC0uMDIuMjMzLS4wMjIuMjMtLjAyMi4yMjQtLjAyMmMuNDgzLS4w\aNS44OS0uMDk2IDEuMjEtLjE0LjA1OC0uMDEuMTE0LS4wMTcuMTY4LS4wMjZs\aLjE1Ni0uMDI1LjE0NC0uMDI2Yy4xMS0uMDIuMjM3LS4wNS4zOC0uMDguMDU1\aLS4wMTQuMTEyLS4wMjcuMTctLjA0cy4xMi0uMDMuMTgyLS4wNDZjLjM0NC0u\aMDg2Ljc2LS4yIDEuMjQtLjMzNS4yNzUtLjA4LjU3Ny0uMTY3Ljg5OC0uMjYy\aIDEuMjU0LS4zNyAyLjQ0NC0uNzQ4IDIuNzQ1LS44NDRsLjA0My0uMDA1Yy4x\aLS4wMS4yIDAgLjI5My4wMjYuMDQ3LjAxMy4wOTMuMDMuMTM3LjA1LjAyMi4w\aMS4wNDMuMDIuMDY0LjAzNC4wNDIuMDI0LjA4Mi4wNTIuMTIuMDgzLjExMi4w\aOTQuMi4yMTYuMjUuMzUzLjAyLjA0Ny4wMzMuMDk2LjA0Mi4xNDZsMS45NDcg\aMTAuMzU4YzAgLjAwNi4wMDIuMDEuMDAzLjAxNy4wNy4zODQuMTA4Ljc3NS4x\aMSAxLjE2Mi4wMDQuNDg3LS4wNDcuOTc2LS4xNTIgMS40NTMtLjAyMy4xMDQt\aLjA1LjIxLS4wNzcuMzEycy0uMDYuMjA2LS4wOS4zMDdjLS4wNjYuMi0uMTQy\aLjQwMi0uMjI3LjU5Ny0uMDIuMDQ4LS4wNDMuMDk2LS4wNjUuMTQ0LS4wNjcu\aMTQ0LS4xNC4yODctLjIxNi40MjYtLjEzLjIzLS4yNzIuNDU3LS40MjYuNjct\aLjA2LjA4Ni0uMTI1LjE3LS4xOS4yNTR6bS0xLjM5My01LjQ2N2MtLjQ4Ny0u\aMDI4LS44OTYuMzUtLjkxOC44MzMtLjA3IDEuNDg1LS44OTcgMi4zODctMi40\aNiAyLjY4LS4yNi4wNS0uNTE3LjA3NS0uNzYuMDc1LTEuMTggMC0yLjA0My0u\aNTc0LTIuNDk2LTEuNjYtLjEzNi0uMzI4LS40NTMtLjU0LS44MDgtLjU0LS4x\aMTYgMC0uMjMuMDI0LS4zMzcuMDctLjQ0NS4xODUtLjY1Ny42OTgtLjQ3IDEu\aMTQzLjcyNCAxLjc0IDIuMjIzIDIuNzM4IDQuMTEgMi43MzguMzUgMCAuNzE2\aLS4wMzUgMS4wODUtLjEwNCAxLjE5My0uMjI0IDIuMTQtLjcyNyAyLjgxNS0x\aLjQ5NC42NTctLjc0NyAxLjAxNy0xLjY5OCAxLjA3LTIuODI2LjAyMy0uNDgy\aLS4zNS0uODkyLS44My0uOTE1em0uMzk1LTUuNjhjLS4wOTgtLjAzMi0uMjk4\aLS4wOTctLjUzNi0uMTYzLS41NTMtLjE1NC0uOTk4LS4yMy0xLjMyNC0uMjMt\aLjEwNSAwLS4xOTguMDA3LS4yODQuMDIzLS41NzIuMTA4LTEuNDUuNzg1LTEu\aOTIgMS4xOC0uMzcuMzA4LS40Mi44Ni0uMTEyIDEuMjMuMTY3LjIuNDEyLjMx\aNS42NzIuMzE1LjIwNCAwIC40MDMtLjA3LjU2LS4yMDIuNTEtLjQyNy45NzYt\aLjczIDEuMTI1LS43OTguMTY4LjAxLjY2NC4xMTIgMS4yMTQuMjlsLjA1Ni4w\aMThjLjA5LjAzLjE4LjA0NC4yNzUuMDQ0LjM4IDAgLjcxMy0uMjQuODMyLS42\aLjE1LS40NTgtLjA5OC0uOTU0LS41NTYtMS4xMDZ6bS02LjkwMiAyLjg3OGMu\aMDkuMDMuMTguMDQ0LjI3NS4wNDQuMzc4IDAgLjcxMi0uMjQuODMtLjYuMTUz\aLS40NTgtLjA5Ny0uOTU0LS41NTUtMS4xMDYtLjMzNy0uMTEtMS4xODItLjM3\aLTEuNzU3LS4zNy0uMTAyIDAtLjE5Mi4wMDctLjI3NS4wMjItLjEzLjAyNC0u\aNTI1LjEtMS40NzguODM4LS4xNDQuMTEtLjI2Ni4yMTItLjM0My4yNzYtLjE4\aLjE1LS4yOS4zNi0uMzEuNTkzcy4wNS40Ni4yLjY0Yy4xNjYuMi40MS4zMTQu\aNjcuMzE0LjE2NSAwIC4zMjctLjA0Ny40NjctLjEzNi4wMjItLjAxNC4wNTYt\aLjAzNi4wOTMtLjA2Ny40Ni0uMzgyLjg4LS42NTggMS4wMjYtLjczLjE3NC4w\aMTMuNjU4LjExOCAxLjE1NS4yODN6Ii8+PC9zdmc+\a");
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_svg_icons\.scss}line{font-family:\0000329}}
+.ag2:before {
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9\aIiMwMDAiIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTEuMTA1IDEw\aLjI1SDMwLjc2Yy40ODIgMCAuODc0LS4zOTMuODc0LS44NzVzLS4zOTItLjg3\aNS0uODc1LS44NzVIMS4xMDRjLS40ODIgMC0uODc1LjM5My0uODc1Ljg3NXMu\aMzkzLjg3NS44NzUuODc1em0yOS42NTUgNC44NzVIMS4xMDZjLS40ODIgMC0u\aODc1LjM5My0uODc1Ljg3NXMuMzk0Ljg3NS44NzYuODc1SDMwLjc2Yy40ODMg\aMCAuODc1LS4zOTIuODc1LS44NzVzLS4zOTItLjg3NS0uODc1LS44NzV6bTAg\aNi42ODhIMS4xMDZjLS40ODIgMC0uODc1LjM5Mi0uODc1Ljg3NXMuMzk0Ljg3\aNS44NzYuODc1SDMwLjc2Yy40ODMgMCAuODc1LS4zOTIuODc1LS44NzVzLS4z\aOTItLjg3NS0uODc1LS44NzV6Ii8+PC9zdmc+\a");
+}
+
+/**
+* Base typographical setup (vertical rythm etc)
+*
+* @section Layout
+* @author jroug
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\00003106}}
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000314}}
+* {
+  word-wrap: break-word;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000319}}
+body {
+  font-size: 0.8125em;
+  line-height: 1.3846153846153846em;
+  font-family: verdana, serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000325}}
+a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/base\/_typography\.scss}line{font-family:\0000328}}
+a:hover {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+.ag1, .ag3 {
+  background-color: #71dad2;
+}
+@media screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+  .ag1, .ag3 {
+    background: green;
+  }
+}
+@media screen and (min-width: 1024px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+  .ag1, .ag3 {
+    background: blue;
+  }
+}
+@media screen and (min-width: 1280px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+  .ag1, .ag3 {
+    background: orange;
+  }
+}
+@media screen and (min-width: 1440px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+  .ag1, .ag3 {
+    background: yellow;
+  }
+}
+@media screen and (min-width: 1920px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\000031}}
+  .ag1, .ag3 {
+    background: purple;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000325}}
+.ag2 {
+  background-color: #fae7b3;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000329}}
+.ag4, .ag5, .ag8, .ag9 {
+  background-color: #ee9e9c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000333}}
+.ag6 {
+  background-color: #f09671;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000337}}
+.ag7 {
+  background-color: #f6d784;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000341}}
+.ag10 {
+  background-color: #ea9fc3;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000346}}
+.ag1 {
+  width: 23.333333333333332%;
+  float: left;
+  margin-left: 0.8333333333333334%;
+  margin-right: 0.8333333333333334%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000350}}
+.ag2 {
+  width: 50%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000354}}
+.ag3 {
+  width: 23.333333333333332%;
+  float: left;
+  margin-left: 0.8333333333333334%;
+  margin-right: 0.8333333333333334%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000358}}
+.ag4 {
+  width: 46.666666666666664%;
+  float: left;
+  margin-left: 1.6666666666666667%;
+  margin-right: 1.6666666666666667%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000363}}
+.ag5 {
+  width: 46.666666666666664%;
+  float: left;
+  margin-left: 1.6666666666666667%;
+  margin-right: 1.6666666666666667%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000367}}
+.ag6 {
+  width: 30%;
+  float: left;
+  margin-left: 1.6666666666666667%;
+  margin-right: 1.6666666666666667%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000371}}
+.ag7 {
+  width: 66.66666666666666%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000375}}
+.ag8 {
+  width: 45%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000379}}
+.ag9 {
+  width: 45%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/_demo\.scss}line{font-family:\0000383}}
+.ag10 {
+  width: 95%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/SDC\/Documents\/development\/2014_boilerplate\/app\/styles\/main\.scss}line{font-family:\0000334}}
+  * {
+    color: #000 !important;
+  }
+}

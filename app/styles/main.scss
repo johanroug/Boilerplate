@@ -1,31 +1,35 @@
 /**
 * Main project stylesheet combiner
 *
-* @section Setup
-* @author Jroug
+* section Setup
+* @author jroug
 */
-// ---------------------------------------------------------------------------
-// Imports
 
 @import "compass";
 
 // ---------------------------------------------------------------------------
 // Framework
-@import "framework/framework",
-        "framework/normalize",
-        "framework/base",
-        "framework/grid",
-        "framework/icons",
-        "framework/mediaquery",
-        "framework/typography";
+@import "framework/susy/language/susy";
+@import "framework/normalize";
+@import "framework/sprites";
+@import "framework/mediaquery";
+@import "framework/mixins";
 
-@import "framework/sprites"; // Only enable if there are files present
+@import "base/variables";
+@import "base/base";
+@import "base/icons";
+@import "base/svg_icons";
+@import "base/typography";
 
+
+@import "demo";
+
+
+// Only enable if there are files present
 
 // ---------------------------------------------------------------------------
 // Modules
 
-        
 @media print {
     * {
         color: #000 !important;
