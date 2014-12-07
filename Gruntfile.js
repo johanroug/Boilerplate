@@ -22,13 +22,13 @@ module.exports = function (grunt) {
         yeoman: {
             // Configurable paths
             app: 'app',
-            dist: 'dist'
+            dist: '<%= yeoman.app %>/dist'
         },
 
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+                files: ['<%= yeoman.app %>/js/{,*/}*.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true
@@ -39,11 +39,11 @@ module.exports = function (grunt) {
             },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                // tasks: ['compass:server', 'newer:csscomb']
                 tasks: ['compass:server']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:copy:styles']
+                files: ['<%= yeoman.app %>/styles/{,*/}*.css']
             },
             livereload: {
                 options: {
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+                    '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
                     '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,webp}'
                 ]
             }
@@ -83,6 +83,21 @@ module.exports = function (grunt) {
             }
         },
 
+        // csscomb: {
+        //     options: {
+        //         config: 'css-comb.json'
+        //     },
+        //     your_target: {
+        //         files: [{
+        //             expand: true,
+        //             filter: 'isFile',
+        //             cwd: '<%= yeoman.app %>/styles',
+        //             src: '**/*.scss',
+        //             dest: '<%= yeoman.app %>/styles'
+        //         }]
+        //     },
+        // },
+
         // Empties folders to start fresh
         clean: {
             dist: {
@@ -94,7 +109,8 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
-            server: '.tmp'
+            server: '.tmp',
+            svgfolder: '<%= yeoman.app %>/assets/svg_icons/compressed'
         },
 
         // Make sure code styles are up to par and there are no obvious mistakes
@@ -105,26 +121,31 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/libs/*',
-                '!<%= yeoman.app %>/scripts/plugins/*',
-                '!<%= yeoman.app %>/scripts/framework/*'
+                '<%= yeoman.app %>/js/{,*/}*.js',
+                '!<%= yeoman.app %>/js/libs/*',
+                '!<%= yeoman.app %>/js/plugins/*',
+                '!<%= yeoman.app %>/js/framework/*'
             ]
         },
 
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
+                require: './base64-encode.rb',
+                sassDir: '<%= yeoman.app %>/styles',                
                 cssDir: '<%= yeoman.app %>/styles',
                 imagesDir: '<%= yeoman.app %>/assets/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                noLineComments: true,
-                config: 'config.rb',
-                // importPath: '<%= yeoman.app %>/styles/modules',
+                javascriptsDir: '<%= yeoman.app %>/js',
+                fontsDir: '<%= yeoman.app %>/styles/fonts',            
+
+                // config.rb moved to grunt
+                outputStyle: 'expanded',  //expanded or nested or compact or compressed 
+                httpStylesheetsPath: '/', 
+                raw: 'Sass::Script::Number.precision = 16\n', 
+                noLineComments: true, 
+                debugInfo: false,
                 relativeAssets: true
-            },
+            },            
             server: {
                 options: {
                     debugInfo: true
@@ -137,47 +158,53 @@ module.exports = function (grunt) {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
                     name: 'main',
-                    out: '<%= yeoman.dist %>/scripts/main.js',
-                    baseUrl: '<%= yeoman.app %>/scripts',
+                    out: '<%= yeoman.dist %>/js/main.js',
+                    baseUrl: '<%= yeoman.app %>/js',
                     optimize: 'uglify',
                     concat: [],
                     findNestedDependencies: true,
                     preserveLicenseComments: false,
                     useStrict: true,
                     wrap: true,
-                    mainConfigFile: '<%= yeoman.app %>/scripts/main.js'
+                    mainConfigFile: '<%= yeoman.app %>/js/main.js'
                 }
+            }
+        },        
+
+        svgmin: { //minimize SVG files
+            options: {
+                plugins: [
+                    { removeViewBox: true },
+                    { removeUselessStrokeAndFill: false }
+                ]
+            },
+            dist: {
+                expand: true,
+                cwd: '<%= yeoman.app %>/assets/svg_icons/raw',
+                src: ['*.svg'],
+                dest: '<%= yeoman.app %>/assets/svg_icons/compressed',
+                // ext: '.colors-theme_1-theme_2-theme_3.svg'
+                ext: '.colors-icon.svg'
             }
         },
 
-        // The following *-min tasks produce minified files in the dist folder
-        imagemin: {
-            dist: {
+        grunticon: { //makes SVG icons into a CSS file
+            myIcons: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{gif,jpeg,jpg,png}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
-            }
-        },
-        cssmin: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/styles/main.css': [
-                        '<%= yeoman.app %>/styles/{,*/}*.css'
-                    ]
+                    cwd: '<%= yeoman.app %>/assets/svg_icons/compressed',
+                    src: ['*.svg'],
+                    dest: '<%= yeoman.app %>/assets/svg_icons/output'
+                }],
+                options: {
+                    cssprefix: '.icon-',
+                    colors: {
+                        icon: '#000'
+                        // theme_1: '#ccc',
+                        // theme_2: '#ed3921',
+                        // theme_3: '#8DC63F'
+                    }
                 }
-            }
-        },
-        svgmin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.svg',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
             }
         },
 
@@ -193,27 +220,18 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         '{,*/}*.html',
-                        'assets/fonts/{,*/}*.*',
-                        'assets/icons/{,*/}*.*',
-                        'assets/images/sprites/*.png',
-                        'assets/images/sprites-retina/*.png',
-                        'bower_components/requirejs/require.js'
+                        'styles/*.css',
+                        'assets/**/*',
+                        'js/vendor/requirejs/require.js'
                     ]
                 }]
-            },
-            styles: {
-                expand: true,
-                dot: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '<%= yeoman.app %>/styles',
-                src: '{,*/}*.css'
             }
         },
 
 		modernizr: {
 			dist: {
-				devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-				outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+				devFile: '<%= yeoman.app %>/js/vendor/modernizr/modernizr.js',
+				outputFile: '<%= yeoman.dist %>/js/vendor/modernizr/modernizr.js',
 				uglify: true
 			}
 		},
@@ -221,14 +239,10 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
-                'compass:server',
-                'copy:styles'
+                'compass:server'
             ],
             dist: [
-                'compass',
-                'copy:styles',
-                'imagemin',
-                'svgmin'
+                'compass'            
             ]
         }
     });
@@ -250,9 +264,14 @@ module.exports = function (grunt) {
         'clean:dist',
         'concurrent:dist',
         'requirejs',
-        'cssmin',
         'copy:dist',
         'modernizr'
+    ]);
+
+    grunt.registerTask('svg', [
+        'clean:svgfolder',
+        'svgmin',
+        'grunticon'
     ]);
 
     grunt.registerTask('default', [
