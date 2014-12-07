@@ -1,8 +1,8 @@
-## 2014 boilerplate
+## Boilerplate - Version 1.0
 
 Build on Yeoman, Bower and Grunt:
 
-* Meta data: Name of lead developer.
+* Meta data: Johan Roug
 * Installation guide.
 clone repo
 
