@@ -1,0 +1,14 @@
+/*
+# Text wrap (Extender)
+
+Generic extender used to create overflowing "..." after text.
+
+Call it on a css class through `@extend %text-wrap;` in the css
+
+*/
+
+%text-wrap{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

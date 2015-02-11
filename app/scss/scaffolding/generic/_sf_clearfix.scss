@@ -1,0 +1,29 @@
+/*
+
+# clearfix
+
+Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+
+Can be used as an extension in scss [1]
+
+or
+
+As a normal class on an element [2]
+
+    <!-- 1 -->
+    <style>
+        .element{
+            @extend .cf;
+        }
+    </style>
+
+    <!-- 2 -->
+    <div class="element cf"></div>
+*/
+.cf, .clearfix, %cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}

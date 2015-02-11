@@ -1,0 +1,173 @@
+/*
+
+# mixins
+
+A collection of sass sweetness
+
+*/
+
+
+/*
+
+### @mixin font-size
+Create a fully formed type style (sizing and vertical rhythm) by passing in a single value [1]
+
+Line-height can be defined by passing in a second argument. [2]
+
+Example:
+
+    <!--[1]-->
+    <style>
+        @include font-size(18);
+    </style>
+
+    <!--[2]-->
+    <style>
+        @include font-size(18/20);
+    </style>
+
+*/
+@mixin font($fontSize, $lineHeight, $basicFontSize: $basicFontSize) {
+  font-size: ($fontSize/$basicFontSize)+em;
+  @if($lineHeight == normal){
+  	line-height: $lineHeight;
+  }
+  @else{
+  	line-height: ($lineHeight/$fontSize)+em;
+  }
+}
+
+/*
+### @mixin vendor
+Create vendor-prefixed CSS in one go.
+
+Example:
+    <style>
+        @include vendor(border-radius, $border-radius);
+    </style>
+*/
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+/*
+### @mixin placeholder
+Create placeholder-prefixed CSS in one go.
+
+Example:
+    input {
+        @include input-placeholder {
+            color: #ccc;
+            background: #F00;
+        }
+    }
+*/
+@mixin input-placeholder {
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+/*
+### @mixin headings
+Style any number of headings in one fell swoop.
+
+*Courtesy of @csswizardry*
+
+Example:
+    <style>
+        @include headings(1, 3){
+            color:#BADA55;
+        }
+    </style>
+*/
+@mixin headings($from: 1, $to: 6){
+    %base-heading {
+        @content
+    }
+    @if $from >= 1 and $to <= 6{
+        @for $i from $from through $to{
+            h#{$i}{
+                @extend %base-heading;
+            }
+        }
+    }
+}
+
+
+/*
+### @mixin keyframes
+Create CSS keyframe animations for all vendors in one go.
+
+*Courtesy of @integralist: twitter.com/integralist/status/260484115315437569*
+
+Example:
+    <style>
+        .foo{
+            @include vendor(animation, shrink 3s);
+        }
+
+        @include keyframe(shrink){
+           from{
+               font-size:5em;
+           }
+        }
+    </style>
+*/
+// @mixin keyframe ($animation-name){
+//     @-webkit-keyframes $animation-name{
+//         @content;
+//     }
+
+//     @-moz-keyframes $animation-name{
+//         @content;
+//     }
+
+//     @-ms-keyframes $animation-name{
+//         @content;
+//     }
+
+//     @-o-keyframes $animation-name{
+//         @content;
+//     }
+
+//     @keyframes $animation-name{
+//         @content;
+//     }
+// }
+
+
+/*
+### @mixin truncate
+Force overly long spans of text to truncate.
+
+*Courtesy of @csswizardry*
+
+Where `$truncation-boundary` is a united measurement.
+
+Example:
+    <style>
+        @include truncate(100%);`
+    </style>
+*/
+@mixin truncate($truncation-boundary){
+    max-width:$truncation-boundary;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}

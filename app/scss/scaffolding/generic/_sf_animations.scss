@@ -1,0 +1,34 @@
+@mixin animation($name: none, $duration: 0s, $timing: ease, $delay: 0s, $iteration: 1, $direction: normal, $fillmode: none) {
+	-webkit-animation: $name $duration $timing $delay $iteration $direction $fillmode;
+	   -moz-animation: $name $duration $timing $delay $iteration $direction $fillmode;
+	    -ms-animation: $name $duration $timing $delay $iteration $direction $fillmode;
+	     -o-animation: $name $duration $timing $delay $iteration $direction $fillmode;
+	        animation: $name $duration $timing $delay $iteration $direction $fillmode;
+}
+
+
+// // https://gist.github.com/1607696
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@include keyframes(spin) {
+	from {
+		@include transform(rotate(0deg));
+	}
+	to {
+		@include transform(rotate(360deg));
+	}
+}
+

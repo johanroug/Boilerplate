@@ -1,0 +1,34 @@
+/*
+
+# Scaffolding - Documentation
+
+
+The Scaffolding part of knife, is a collection of base/default/most used css building blocks.
+You should never write project specific css in the scaffolding, thats what the base & theme is for.
+
+## Contents
+
+### generic
+- **mixins** - *Awesome sass tools!*
+- **reset** - *Set some defaults to align browser quirks.*
+- **normalize** - *Normalizing browser quirks.*
+- **clearfix** - *Clearing float issues.*
+
+### base
+- **headings** - *H1, H2, H3 etc.*
+
+*/
+
+
+@import "sf_defaults",
+		"generic/sf_mixins",
+		"generic/sf_clearfix",
+		"generic/sf_hide",
+        "generic/sf_deleted",
+        "generic/sf_text-wrap";
+
+.knife{
+	@import "sf_defaults",
+            "generic/sf_reset",
+            "generic/sf_normalize";
+}
