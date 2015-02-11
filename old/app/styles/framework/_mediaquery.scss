@@ -1,0 +1,25 @@
+/**
+* Base typographical setup (vertical rythm etc)
+*
+* @media queries
+* @author jroug
+*/
+//-------------------------------------------
+
+@mixin bp($point) {
+	@if $point == bs { //bigScreen
+		@media screen and (min-width: 1920px) { @content; }
+	}
+	@if $point == dtw { //desktopWide
+		@media screen and (min-width: 1440px) { @content; }
+	}
+	@if $point == dt { //desktop
+		@media screen and (min-width: 1280px) { @content; }
+	}
+	@if $point == th { //tabletH
+		@media screen and (min-width: 1024px)  { @content; }
+	}
+	@if $point == tv { //tabletV
+		@media screen and (min-width: 768px)  { @content; }
+	}
+}

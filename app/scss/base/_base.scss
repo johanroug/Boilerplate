@@ -1,0 +1,28 @@
+/**
+* @section framework
+* @author jroug
+*/
+
+* {
+	@include box-sizing(border-box);
+}
+
+// ---------------------------------------------------------------------------
+// Base variables
+$footer-height: 135px;
+$show-grid-backgrounds: true;
+
+html {
+	height: 100%;
+}
+
+body {
+	overflow-y: scroll;
+
+	min-height: 100%;
+
+	color: $color-black;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none; //don't resize on orientation mobile
+}

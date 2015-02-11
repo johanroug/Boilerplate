@@ -1,0 +1,8 @@
+dev:
+    - 'clean:development'
+    - 'requirejs:development'
+    - 'sass:development'
+    - 'watchDevelopment'
+
+default:
+    - 'dev'

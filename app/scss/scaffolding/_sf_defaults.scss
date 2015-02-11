@@ -1,0 +1,17 @@
+/*
+
+# Defaults
+
+Scaffolding default variable values. - should always be overwritten in core or theme.
+
+*/
+
+@import "compass/css3";
+
+* {
+    &,
+    &:before,
+    &:after {
+        @include box-sizing(border-box);
+    }
+}

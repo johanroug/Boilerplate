@@ -1,0 +1,28 @@
+/**
+* Main project stylesheet combiner
+*
+* section Setup
+* @author jroug
+*/
+
+@import	"scaffolding/sf_scaffolding";
+
+// ---------------------------------------------------------------------------
+// Framework
+@import "base/grid/mediaquery",
+		"base/grid/grid",
+		"base/variables",
+		"base/base",
+		"base/icons",
+		"base/typography";
+
+// "base/svg_icons",
+
+// ---------------------------------------------------------------------------
+// Modules
+
+@media print {
+	* {
+		color: #000 !important;
+	}
+}
