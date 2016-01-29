@@ -1,5 +1,5 @@
 ## Boilerplate - Version 1.0ok4
-noget nyt2
+OKOKOK
 
 Build on Yeoman, Bower and Grunt:
 
