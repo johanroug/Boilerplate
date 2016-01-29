@@ -1,6 +1,8 @@
 ## Boilerplate - Version 1.0ok4
 OKOKOK2222
 
+Det her er lokalt
+
 Build on Yeoman, Bower and Grunt:
 
 * Meta data: Johan Roug
